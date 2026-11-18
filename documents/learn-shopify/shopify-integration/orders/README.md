@@ -1,12 +1,13 @@
 ---
-description: Learn how HotWax Commerce synchronizes order information from Shopify.
+description: Learn how HotWax Commerce imports Shopify orders and synchronizes order and routing updates.
 ---
 
 # Orders
 
-HotWax Commerce ensures that order information is always updated to streamline the process of fulfilling orders. When syncing orders from Shopify, HotWax Commerce tackles four essential scenarios
+HotWax Commerce imports Shopify orders and applies order updates as they move toward fulfillment. The order integration covers these workflows:
 
-1. **Initial Order Download**: To integrate HotWax Commerce with Shopify, merchants are required to import all open sales orders from a particular time frame that HotWax Commerce must fulfill.
-2. **Importing Newly Created Orders:** All the orders that have been placed since the initial download must be imported into HotWax Commerce.
-3. **Approve Orders for Fulfillment:** Before approving orders for fulfillment, HotWax Commerce must ensure that payment has been authorized and verified by Shopify.
-4. **Synchronizing Order Updates:** When making changes to orders, like updating shipping addresses, item quantities, or item details, it is important to inform HotWax Commerce to ensure proper synchronization of order updates.
+1. Import open sales orders from the launch period that HotWax Commerce will fulfill.
+2. Import new orders placed after the initial download.
+3. Check payment and order eligibility before approving orders for fulfillment.
+4. Apply Shopify order updates, such as changes to shipping addresses, item quantities, or item details.
+5. Send eligible HotWax routing decisions to Shopify and reconcile incoming location changes through [routing location sync](routing-location-sync.md).

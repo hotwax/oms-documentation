@@ -15,7 +15,7 @@ This guide covers day-to-day product sync operations after setup. To connect a n
 3. Select the Shopify connection that you want to monitor.
 4. Select the active `Product sync` card.
 
-The card summarizes records processed in the last completed import, unsynced Shopify events, and the latest pipeline status. If the connection shows `Setup new product sync`, complete the [first product import in Chapter 6](product-store-onboarding.md#6-import-and-validate-products). If it shows `Upgrade to new product sync` or `Disable old product sync`, follow the [legacy upgrade guide](upgrade-shopify-product-sync.md).
+The card summarizes the linked import's record count, unsynced Shopify updates, and the latest pipeline status. Review the import's outcome before treating its count as successfully imported products. If the connection shows `Setup new product sync`, complete the [first product import in Chapter 6](product-store-onboarding.md#6-import-and-validate-products). If it shows `Upgrade to new product sync` or `Disable old product sync`, follow the [legacy upgrade guide](upgrade-shopify-product-sync.md).
 
 <figure><img src="../../.gitbook/assets/shopify-product-sync-entry.jpg" alt="Product sync card on the Shopify connection details page"><figcaption><p>Product sync status on the Shopify connection details page</p></figcaption></figure>
 
@@ -29,11 +29,13 @@ The dashboard brings the current run, scheduled jobs, pipeline health, and custo
 
 The `Summary` card shows:
 
-* The last completed sync and its relative time
-* The number of updates processed in the last sync
+* The recorded last-sync time and its relative time
+* The total record count of its linked import
 * The next scheduled sync or a `Paused` status
 * The number of unsynced Shopify updates
 * The linked product store
+
+The recorded last-sync time comes from a consumed or confirmed request with a linked import. Check that import's failed records separately; the summary is not proof that all products succeeded. `Un-synced updates` shows products changed after the recorded boundary, not every failed record from earlier imports.
 
 Select the lightning action to run the recurring sync job now. The app asks for confirmation because stopping an active job run is unavailable.
 
@@ -43,7 +45,7 @@ Select `Un-synced updates` to review Shopify products waiting to be imported. Se
 
 ### Track the current run
 
-The `Track sync progress` card follows the latest run through the complete pipeline:
+The `Track sync progress` card follows the selected run through the pipeline. It can retain a run opened from history or a newly started request instead of switching to the latest request. Check the message ID before interpreting the stages:
 
 | Stage | Information available |
 | --- | --- |
@@ -61,16 +63,16 @@ The `System Message` modal shows:
 * Why the run is waiting and which job performs the next step
 * The next scheduled time for that job, when available
 * A `Send now`, `Poll now`, or `Cancel` action when the current message status allows it
-* The Shopify bulk operation ID, or `Pending` until Shopify accepts the request
+* The Shopify bulk operation ID, or `Pending` when no operation ID is recorded
 * `Message Text`, which contains the request payload, and `Error Text` when the system message has an error
 
-Use the message ID when sharing a specific run with the technical team. If a message remains `Produced`, check the listed `Send update request` schedule or use `Send now`. If it remains `Sent`, check when `Import completed requests` runs or use `Poll now`. A missing bulk operation ID means that Shopify hasn't accepted the request yet. Open `Error Text` when the message reaches an error state.
+Use the message ID to trace a specific run. If a message remains `Produced`, check the listed `Send update request` schedule or use `Send now`. If it remains `Sent`, check when `Import completed requests` runs or use `Poll now`. A missing bulk operation ID means that the app has no recorded operation to display; check the send outcome before submitting another request. Open `Error Text` when the message reaches an error state.
 
 #### Shopify bulk operation details
 
-The `Bulk Operation` modal shows the Shopify bulk operation ID and its current status. It also shows the status reported for the current sync run, or `Pending` when the app hasn't received one yet.
+The `Bulk Operation` modal shows the Shopify bulk operation ID and its current status. It also shows the status reported for the current sync run, or `Pending` when the app has not received one yet.
 
-Use the bulk operation ID to identify the request in Shopify or when escalating a run that remains active for an unusual amount of time. If the system message is still `Produced` and no bulk operation ID exists, investigate the send stage instead of Shopify processing. After Shopify completes the operation, investigate `Import completed requests` when the HotWax import doesn't begin.
+Use the bulk operation ID to identify the request in Shopify or when escalating a run that remains active for an unusual amount of time. If the system message is still `Produced` and no bulk operation ID exists, investigate the send stage instead of Shopify processing. After Shopify completes the operation, investigate `Import completed requests` when the HotWax import does not begin.
 
 #### HotWax bulk import details
 
@@ -102,24 +104,24 @@ Select `Queue update requests`, `Send update request`, or `Import completed requ
 | `Run now` | Starts one immediate execution without changing the schedule | Use it after correcting a temporary problem or when the pipeline is waiting for this job. Avoid repeated runs while an earlier execution is active. |
 | `Active` | Whether the service job is active or paused | Check this first when the dashboard shows a pause icon or records remain in one pipeline stage. |
 | `Last run` | Time and outcome of the latest execution | Confirms whether the job has run since the affected request entered the pipeline. |
-| `Instance of product` | The HotWax application product that owns the service job | Useful to the technical team when verifying that the job belongs to the expected installed component. This isn't the Shopify catalog's product store. |
+| `Instance of product` | The HotWax application product that owns the service job | Useful to the technical team when verifying that the job belongs to the expected installed component. This is not the Shopify catalog's product store. |
 | `Schedule` | Quartz cron expression, readable schedule, next run time, and common schedule options | Use the readable schedule and next run time for routine checks. Change the cron expression only when the operating schedule must change. |
 | `Parameters` | Configured job parameters and service parameter definitions or defaults | Use these values to verify which shop and configuration a job processes. Parameter names and availability depend on the job. |
-| `Recent runs` | The last five executions, including status, start and completion times, duration, user, available counts, and output message | Use the output and status to distinguish a job that hasn't run from one that ran but found no work or returned an error. |
-| `Edit history` | The last recorded field changes, previous and new values, user, and timestamp | Use this when a job becomes paused or its schedule changes without an intentional update. The section can show `Unavailable` when the audit API isn't exposed. |
+| `Recent runs` | The last five executions, including status, start and completion times, duration, user, available counts, and output message | Use the output and status to distinguish a job that has not run from one that ran but found no work or returned an error. |
+| `Edit history` | The last recorded field changes, previous and new values, user, and timestamp | Use this when a job becomes paused or its schedule changes without an intentional update. The section can show `Unavailable` when the audit API is not exposed. |
 
 Use the refresh action to reload the job details. When you change `Active` or `Schedule`, use the save action. Closing or refreshing with unsaved changes displays a discard confirmation.
 
 The most useful checks depend on the job:
 
-* `Queue update requests` is the shop-specific job. In `Parameters`, verify `shopId`, `productStoreIds`, and `shopifyProductIdentifier` when available. These values confirm which Shopify shop, HotWax product store, and internal name mapping the job uses. Check its active state, schedule, and recent output when Shopify changes aren't creating product sync requests.
+* `Queue update requests` is the shop-specific job. In `Parameters`, verify `shopId`, `productStoreIds`, and `shopifyProductIdentifier` when available. These values confirm which Shopify shop, HotWax product store, and internal name mapping the job uses. Check its active state, schedule, and recent output when Shopify changes are not creating product sync requests.
 * `Send update request` sends produced system messages to Shopify. Check its active state, next run, and recent output when the current system message remains `Produced` or no Shopify bulk operation ID appears.
-* `Import completed requests` checks Shopify operations and starts the HotWax Data Manager import. Check its active state, next run, and recent output when Shopify has completed an operation but the HotWax import hasn't started, or when update files remain waiting for processing.
+* `Import completed requests` checks Shopify operations and starts the HotWax Data Manager import. Check its active state, next run, and recent output when Shopify has completed an operation but the HotWax import has not started, or when update files remain waiting for processing.
 
 A pause icon means that the corresponding job is paused. Resume paused jobs that the scheduled pipeline requires.
 
 {% hint style="warning" %}
-`Bulk operations finish webhook` doesn't open a details modal. Its row shows `Active` or `Inactive`, and selecting the row immediately subscribes or unsubscribes the Shopify webhook. Don't select it only to inspect its status.
+`Bulk operations finish webhook` does not open a details modal. Its row shows `Active` or `Inactive`, and selecting the row immediately subscribes or unsubscribes the Shopify webhook. Do not select it only to inspect its status.
 {% endhint %}
 
 The `Pipeline` card shows pending update requests, the current Shopify request, update files waiting for import, and error records from the last 24 hours. A growing count usually points to a paused job, a request still waiting to finish, or import errors that need review.
@@ -158,7 +160,7 @@ Use this option after correcting one or more products in Shopify or when a small
 
 <figure><img src="../../.gitbook/assets/shopify-product-sync-replay.jpg" alt="Replay sync dialog with date and time controls"><figcaption><p>Choose when the replay should begin</p></figcaption></figure>
 
-Replay changes the last-sync time so that Shopify updates from the selected time are imported again. Use the narrowest practical time range to avoid processing unrelated updates.
+Replay queues a new request with the selected start time. Configured query filters and date boundaries still apply. Review the generated query and import result before treating missed updates as recovered. Use the narrowest practical time range to avoid processing unrelated updates.
 
 ### Re-sync the complete catalog
 
@@ -168,7 +170,7 @@ Replay changes the last-sync time so that Shopify updates from the selected time
 
 <figure><img src="../../.gitbook/assets/shopify-product-sync-full-catalog-resync.jpg" alt="Full catalog re-sync dialog with Shopify product and variant counts"><figcaption><p>Review the catalog size before starting a full re-sync</p></figcaption></figure>
 
-This request imports every product that currently exists in Shopify. It can take a long time for a large catalog.
+This request skips the generated date window but keeps configured query filters and status exclusions. The default query excludes archived products and can include drafts. Review the actual query to confirm the scope. A large catalog can take longer to process.
 
 {% hint style="warning" %}
 A full catalog re-sync leaves products in HotWax Commerce after Shopify deletes them. Use the product deletion process for deleted Shopify products.
@@ -181,7 +183,7 @@ A full catalog re-sync leaves products in HotWax Commerce after Shopify deletes 
 1. Search by product ID, name, or handle.
 2. Select `View details` to review the full error record.
 3. Correct the source data or configuration that caused the error.
-4. Select `Retry` to sync the product again.
+4. Select `Retry` to fetch the current product from Shopify and import it again. This creates an on-demand attempt rather than replaying the original failed file.
 
 Use the refresh action to reload the error list after another import finishes. When a failed record lacks a Shopify product ID, direct retry is unavailable. Use the error details to locate the source product or ask the technical team for help.
 
