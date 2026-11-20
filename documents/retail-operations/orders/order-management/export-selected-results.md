@@ -5,7 +5,7 @@ description: Download the selected orders, returns, or customers from a list in 
 # Export selected results
 
 {% hint style="info" %}
-CSV export is currently available in [Order Manager Dev](https://hotwax-order-manager-dev.web.app/).
+CSV export is currently available in [Order Manager Dev](https://order-manager-dev.hotwax.io/).
 {% endhint %}
 
 Download a comma-separated values (CSV) file when you need to review a set of orders, returns, or customers outside Order Manager.
