@@ -79,18 +79,18 @@ The header shows how many matching orders are loaded and the total number of mat
 
 ## Select orders for a bulk action
 
-`Select` appears only when your account has access to at least one bulk action.
-
 1. Search and filter until the list contains only the group you intend to work on.
 2. Scroll until every intended order is loaded.
 3. Select `Select`.
 4. Select individual rows, or use the header checkbox to select all currently loaded rows.
 5. Confirm the selected count in the footer.
-6. Choose one available action.
+6. Choose one available action. On a narrow screen, open `More actions` first.
 
 The header checkbox does not select matching orders that have not loaded yet. Changing the search or filters can also remove orders from the current selection.
 
 Select `Done` to leave select mode without taking an action.
+
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md).
 
 ### Edit the shipping method
 

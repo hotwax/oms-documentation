@@ -39,6 +39,7 @@ A pick profile is the business release policy. `Funnel` exposes its priority, ba
 | --- | --- | --- |
 | Assess the current workload | [Funnel](funnel.md) | Compare fulfillment progress, exceptions, and facility workload. Open a linked queue when a card or row needs investigation. |
 | Find a known order | [Find orders](find-sales-orders.md) | Search by an order or customer reference, then open the order or select eligible bulk actions. |
+| Export records for review | [Export selected results](export-selected-results.md) | Download selected orders, returns, or customers to a CSV file. |
 | Find a customer | [Find customers](find-customers.md) | Search for the correct party ID, then open [Customer details](view-customer-details.md). |
 | Maintain a customer or review customer activity | [Customer details](view-customer-details.md) | Update contact or relationship data, resolve tasks, or open related orders and returns. |
 | Create a Shopify order | [Create order](create-order.md) | Select the shop, customer, address, and items, then submit and verify the new order. |

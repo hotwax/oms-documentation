@@ -73,6 +73,8 @@ Select a row outside `Select` mode to open [Order details](view-order-details.md
 
 The page loads 50 orders at a time. The header checkbox does not select results that have not loaded. Scroll until the loaded count matches the total before selecting the complete filtered population.
 
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md).
+
 ## Broker selected ship groups
 
 Use `Broker selected` only when every virtual or unassigned ship group returned for the selected orders should use the same routing group. Presence in this queue does not prove that every returned group is lifecycle-eligible.

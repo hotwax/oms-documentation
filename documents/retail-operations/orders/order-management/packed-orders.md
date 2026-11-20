@@ -59,6 +59,8 @@ The header checkbox does not select results that have not loaded. Scroll until t
 
 Selection is stored by order ID. The shipping action submits every unique shipment ID found in the currently loaded Packed rows for each selected order. If an order has multiple loaded shipment records, selecting that order can submit more than one shipment.
 
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md).
+
 ## Ship orders
 
 {% hint style="warning" %}
