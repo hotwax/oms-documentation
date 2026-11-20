@@ -77,26 +77,3 @@ Flow: NetSuite warehouse ATP and store QOH files → HotWax inventory and online
 Malbon’s inventory-event customization allows physical inventory changes at locations outside a shop’s transfer facility group to remain eligible for Shopify updates. The group is configured in HotWax; its live location membership is not included in the repository.
 
 For transfer orders, Malbon queues a Shopify transfer after approval only when at least one end of the transfer is in the shop’s configured transfer facility group. If neither end is included, the transfer is not sent to Shopify. If only one end is included, the Shopify transfer uses that location and leaves out the other one.
-
-## Sources
-
-- [Warehouse ATP saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_atp.xml)
-
-- [Store QOH saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_qoh.xml) and [Store QOH deployment prefix and status](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customscript_hc_inventoryitem_store_qoh.xml)
-
-- NetSuite inventory [export scripts](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory) and [deployment and schedule records](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory)
-
-- [NetSuite CSV upload script](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory/HC_uploadCSV_InventoryItems.js) and [script record and deployments](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customscript_imp_inventoryitem.xml)
-
-- [HotWax Inventory Sync location field definition](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/custrecord_hc_inv_sync.xml) and [SDF deployment manifest](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/deploy.xml)
-
-- [Malbon Shopify inventory-event rule](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/service/co/hotwax/sob/product/InventoryEventServices.xml)
-
-- [Malbon Shopify transfer-order rule](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/service/co/hotwax/shopify/transfer/ShopifyInventoryTransferServices.xml)
-
-- [HotWax Inventory Lifecycle](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle)
-
-- [HotWax Shopify integration overview](https://docs.hotwax.co/documents/learn-shopify)
-
-- [NetSuite scheduled script deployment status guidance](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508948655.html)
-
