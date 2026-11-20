@@ -80,20 +80,20 @@ For transfer orders, Malbon queues a Shopify transfer after approval only when a
 
 ## Sources
 
-- Warehouse ATP saved search and filters
+- [Warehouse ATP saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_atp.xml)
 
-- Store QOH saved search and filters
+- [Store QOH saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_qoh.xml)
 
-- NetSuite inventory export scripts and schedules
+- NetSuite inventory [export scripts](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory) and [deployment and schedule records](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory)
 
-- NetSuite CSV upload script
+- [NetSuite CSV upload script](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory/HC_uploadCSV_InventoryItems.js)
 
-- Malbon Shopify inventory-event rule
+- [Malbon Shopify inventory-event rule](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/service/co/hotwax/sob/product/InventoryEventServices.xml)
 
-- Malbon Shopify transfer-order rule
+- [Malbon Shopify transfer-order rule](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/service/co/hotwax/shopify/transfer/ShopifyInventoryTransferServices.xml)
 
-- HotWax Inventory Lifecycle
+- [HotWax Inventory Lifecycle](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle)
 
-- HotWax Shopify integration overview
+- [HotWax Shopify integration overview](https://docs.hotwax.co/documents/learn-shopify)
 
 Source document: [Malbon Inventory and Order Commitments](https://docs.google.com/document/d/1hFPxLEScRooXqPrqT53kFM7wqxNNITqGUGCp04sXr0k/edit?tab=t.0).
