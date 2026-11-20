@@ -42,10 +42,6 @@ Each export script runs its saved search and creates a dated CSV in NetSuite’s
 
 A second script sends CSV files from that folder to the configured SFTP connection. It gets the connection settings from a NetSuite record and moves successfully uploaded files to Archive Inventory Item CSV.
 
-### Repository deployment details
-
-The checked-in warehouse ATP deployment `customdeploy1` and Store QOH deployment `customdeploy_hc_inventoryitem_store_qoh` are marked `TESTING`, with daily recurrence values of 07:00Z and 07:30Z respectively. NetSuite requires a deployment status of `Scheduled` for one-time or recurring script submissions ([deployment status guidance](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508948655.html)). These repository settings do not confirm the live NetSuite deployment status; verify the active account settings before relying on either recurring run.
-
 ### Inventory CSV uploader
 
 The uploader record ID is `customscript_imp_inventoryitem`, although the script is named `HC_uploadCSV_InventoryItems`. Its two checked-in deployments are marked `TESTING` and have no recurrence blocks. Each run selects at most 20 CSV files. The script appends `inventoryitem` to the configured SFTP directory when creating the connection, then passes `/csv/` as the directory in each upload call. The repository shows these values but does not confirm the live SFTP path or upload schedule.
