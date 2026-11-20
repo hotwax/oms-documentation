@@ -30,13 +30,25 @@ The store search reads NetSuite’s location quantity on hand field. If that val
 
 Search ID: customsearch_export_inventory_item_qoh. Filename prefix: InventoryItemWhQOHExport_. The search filters to location type 1.
 
+The Store QOH deployment is titled `HC_generateCSV_InventoryItemsStore_QOH` but uses the prefix `InventoryItemWhQOHExport_`; the `Wh` segment is present in the checked-in setting.
+
 Both files identify the item and location, provide an inventory quantity, and specify which reset type to use. They include active inventory part, group, kit, and non-inventory part items.
+
+The saved searches filter by item type, inactive status, and location type. The `HotWax Inventory Sync` location checkbox (`custrecord_hc_inv_sync`) is defined in the repository, but neither inventory saved search includes it as a filter. For these exports, the saved-search filters select rows by item and location type, not by that checkbox.
 
 ## How the files are created and sent
 
 Each export script runs its saved search and creates a dated CSV in NetSuite’s Inventory Item CSV folder. If the search returns no results, the script does not create a file.
 
 A second script sends CSV files from that folder to the configured SFTP connection. It gets the connection settings from a NetSuite record and moves successfully uploaded files to Archive Inventory Item CSV.
+
+### Repository deployment details
+
+The checked-in warehouse ATP deployment `customdeploy1` and Store QOH deployment `customdeploy_hc_inventoryitem_store_qoh` are marked `TESTING`, with daily recurrence values of 07:00Z and 07:30Z respectively. NetSuite requires a deployment status of `Scheduled` for one-time or recurring script submissions ([deployment status guidance](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508948655.html)). These repository settings do not confirm the live NetSuite deployment status; verify the active account settings before relying on either recurring run.
+
+### Inventory CSV uploader
+
+The uploader record ID is `customscript_imp_inventoryitem`, although the script is named `HC_uploadCSV_InventoryItems`. Its two checked-in deployments are marked `TESTING` and have no recurrence blocks. Each run selects at most 20 CSV files. The script appends `inventoryitem` to the configured SFTP directory when creating the connection, then passes `/csv/` as the directory in each upload call. The repository shows these values but does not confirm the live SFTP path or upload schedule.
 
 ## What happens when a customer places an order
 
@@ -74,11 +86,13 @@ For transfer orders, Malbon queues a Shopify transfer after approval only when a
 
 - [Warehouse ATP saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_atp.xml)
 
-- [Store QOH saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_qoh.xml)
+- [Store QOH saved search and filters](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customsearch_export_inventory_item_qoh.xml) and [Store QOH deployment prefix and status](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customscript_hc_inventoryitem_store_qoh.xml)
 
 - NetSuite inventory [export scripts](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory) and [deployment and schedule records](https://github.com/hotwax/malbon/tree/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory)
 
-- [NetSuite CSV upload script](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory/HC_uploadCSV_InventoryItems.js)
+- [NetSuite CSV upload script](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/FileCabinet/SuiteScripts/HotWaxCommerce/SyncInventory/HC_uploadCSV_InventoryItems.js) and [script record and deployments](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/customscript_imp_inventoryitem.xml)
+
+- [HotWax Inventory Sync location field definition](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/Objects/HotWaxCommerce/SyncInventory/custrecord_hc_inv_sync.xml) and [SDF deployment manifest](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/netsuite/src/deploy.xml)
 
 - [Malbon Shopify inventory-event rule](https://github.com/hotwax/malbon/blob/bcc12bd1d85e1e16569603883ec88d0d48ab7431/service/co/hotwax/sob/product/InventoryEventServices.xml)
 
@@ -87,3 +101,6 @@ For transfer orders, Malbon queues a Shopify transfer after approval only when a
 - [HotWax Inventory Lifecycle](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle)
 
 - [HotWax Shopify integration overview](https://docs.hotwax.co/documents/learn-shopify)
+
+- [NetSuite scheduled script deployment status guidance](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1508948655.html)
+
