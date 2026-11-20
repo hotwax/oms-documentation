@@ -95,5 +95,3 @@ For transfer orders, Malbon queues a Shopify transfer after approval only when a
 - [HotWax Inventory Lifecycle](https://docs.hotwax.co/documents/learn-hotwax-oms/business-process-models/inventory-lifecycle)
 
 - [HotWax Shopify integration overview](https://docs.hotwax.co/documents/learn-shopify)
-
-Source document: [Malbon Inventory and Order Commitments](https://docs.google.com/document/d/1hFPxLEScRooXqPrqT53kFM7wqxNNITqGUGCp04sXr0k/edit?tab=t.0).
