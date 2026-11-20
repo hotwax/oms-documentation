@@ -38,14 +38,6 @@ Each export script runs its saved search and creates a dated CSV in NetSuite’s
 
 A second script sends CSV files from that folder to the configured SFTP connection. It gets the connection settings from a NetSuite record and moves successfully uploaded files to Archive Inventory Item CSV.
 
-## What the inventory terms mean
-
-Quantity on hand (QOH) is the physical inventory at a store or warehouse.
-
-Available to promise (ATP) is the quantity at one location after HotWax accounts for orders already allocated there.
-
-Online ATP is the quantity HotWax can offer for online sale across eligible locations. HotWax’s standard model accounts for safety stock, thresholds, orders waiting for a location, and locations excluded from online sales.
-
 ## What happens when a customer places an order
 
 ### 1. The order enters HotWax
