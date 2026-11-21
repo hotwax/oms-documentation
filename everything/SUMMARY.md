@@ -97,6 +97,7 @@
   * [Shopify product sync](tools/shopify/product-sync.md)
   * [Investigate Shopify Transfer Sync](tools/shopify/transfer-sync-troubleshooting.md)
   * [Fulfillment And Invoice Status Troubleshooting](tools/shopify/fulfillment-status-troubleshooting.md)
+  * [Cancellation And Refund Troubleshooting](tools/shopify/cancellation-refund-troubleshooting.md)
 * [Tathya](tools/tathya/README.md)
   * [Database Configuration](tools/tathya/database-configuration/README.md)
     * [Additional Settings](tools/tathya/database-configuration/additional-configurations.md)
