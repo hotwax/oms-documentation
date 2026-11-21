@@ -8,21 +8,19 @@ description: >-
 
 How NetSuite inventory feeds, customer orders, and Shopify updates fit together
 
-Malbon’s repository defines two inventory exports from NetSuite: a warehouse available-to-promise (ATP) feed and a store quantity-on-hand (QOH) feed. The sections below explain what the files contain, how the order commitment moves through HotWax, and which Shopify rules are specific to Malbon.
+Malbon uses two inventory feeds from NetSuite. The warehouse feed combines quantity on hand (QOH) with incoming preorder quantity. The store feed contains QOH. The sections below explain what the files contain, how the order commitment moves through HotWax, and which Shopify rules are specific to Malbon.
 
-![Diagram showing NetSuite warehouse ATP and store QOH feeds into HotWax, then Shopify order brokering, location allocation, fulfillment, and refreshed sellable quantity.](images/malbon-inventory-and-order-commitments.png)
+![NetSuite sends warehouse on-hand and incoming preorder quantities and store QOH to HotWax. The diagram also shows how Shopify orders move through brokering, location assignment, and fulfillment before HotWax refreshes sellable quantity.](images/malbon-inventory-and-order-commitments.png)
 
 *The diagram summarizes the inventory feed and order fulfillment flow. The following sections explain the queue commitment and Malbon-specific Shopify rules.*
 
 ## What NetSuite sends
 
-NetSuite creates two separate inventory files. The warehouse file uses the quantity available at each location. The store file uses the quantity on hand at each location.
+### Warehouse on-hand and preorder inventory
 
-### Warehouse ATP
+In the live configuration reported in the implementation review, the warehouse search adds location quantity on hand to incoming preorder quantity from open purchase orders for warehouse location `221`. The file marks each row as a QOH reset.
 
-The warehouse search reads NetSuite’s location quantity available field. If that value is empty, the search uses zero. The file marks the row as an ATP reset.
-
-Search ID: customsearch_export_inventory_item_atp. Filename prefix: InventoryItemWhAtpExport_. The search filters to location type 2.
+The checked-in search `customsearch_export_inventory_item_atp` still uses location quantity available and marks rows as an ATP reset. That search definition describes the repository configuration.
 
 ### Store QOH
 
@@ -32,9 +30,7 @@ Search ID: customsearch_export_inventory_item_qoh. Filename prefix: InventoryIte
 
 The Store QOH deployment is titled `HC_generateCSV_InventoryItemsStore_QOH` but uses the prefix `InventoryItemWhQOHExport_`; the `Wh` segment is present in the checked-in setting.
 
-Both files identify the item and location, provide an inventory quantity, and specify which reset type to use. They include active inventory part, group, kit, and non-inventory part items.
-
-The saved searches filter by item type, inactive status, and location type. The `HotWax Inventory Sync` location checkbox (`custrecord_hc_inv_sync`) is defined in the repository, but neither inventory saved search includes it as a filter. For these exports, the saved-search filters select rows by item and location type, not by that checkbox.
+The checked-in saved searches identify the item, location, quantity, and reset type. They filter by item type, active status, and location type. Eligible item types include inventory part, group, kit, and non-inventory part. Neither checked-in search uses the `HotWax Inventory Sync` location checkbox (`custrecord_hc_inv_sync`).
 
 ## How the files are created and sent
 
@@ -45,6 +41,10 @@ A second script sends CSV files from that folder to the configured SFTP connecti
 ### Inventory CSV uploader
 
 The uploader record ID is `customscript_imp_inventoryitem`, although the script is named `HC_uploadCSV_InventoryItems`. Its two checked-in deployments are marked `TESTING` and have no recurrence blocks. Each run selects at most 20 CSV files. The script appends `inventoryitem` to the configured SFTP directory when creating the connection, then passes `/csv/` as the directory in each upload call. The repository shows these values but does not confirm the live SFTP path or upload schedule.
+
+### Daily inventory resets and peak sales
+
+Malbon runs a daily full on-hand inventory reset from NetSuite to HotWax. A separate daily on-hand reset sends inventory from HotWax to Shopify. During peak sales events such as Black Friday and Cyber Monday, Malbon can pause the Shopify reset and rely on event-based ledger updates to keep inventory in sync and reduce oversell risk.
 
 ## What happens when a customer places an order
 
@@ -66,14 +66,16 @@ When HotWax receives the fulfillment update, QOH decreases to reflect the goods 
 
 ## How to read the numbers
 
-QOH is the physical baseline. An order is a commitment against that inventory. While it waits for a location, it reduces Online ATP. After allocation, it is held against the selected location’s ATP. After fulfillment, QOH reflects the physical movement.
+QOH is the physical baseline. The warehouse feed adds incoming preorder units, so its total can be higher than the physical count. An order is a commitment against inventory. While it waits for a location, it reduces Online ATP. After allocation, it is held against the selected location’s ATP. After fulfillment, QOH reflects the physical movement.
 
 The quantities in NetSuite, HotWax, and Shopify are views of the same inventory at different stages. Do not add the three system totals together.
 
-Flow: NetSuite warehouse ATP and store QOH files → HotWax inventory and online availability → Shopify sellable quantity. Shopify order → HotWax brokering queue → location allocation → fulfillment update → refreshed HotWax availability → Shopify.
+Flow: NetSuite warehouse on-hand and incoming preorder quantities, plus store QOH → HotWax inventory and online availability → Shopify sellable quantity. Shopify order → HotWax brokering queue → location allocation → fulfillment update → refreshed HotWax availability → Shopify.
 
 ## Malbon’s Shopify rules
 
 Malbon’s inventory-event customization allows physical inventory changes at locations outside a shop’s transfer facility group to remain eligible for Shopify updates. The group is configured in HotWax; its live location membership is not included in the repository.
 
 For transfer orders, Malbon queues a Shopify transfer after approval only when at least one end of the transfer is in the shop’s configured transfer facility group. If neither end is included, the transfer is not sent to Shopify. If only one end is included, the Shopify transfer uses that location and leaves out the other one.
+
+For a warehouse-to-store transfer where the store is outside the group, Shopify tracks the warehouse commitment and omits the store endpoint. This avoids a second deduction from store inventory managed by Retail Ops.
