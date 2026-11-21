@@ -3,6 +3,8 @@
 Within the Transfer Orders section you will see an Open tab and a Completed tab. The Open tab displays transfer orders waiting to be received; the Completed tab contains orders that have already been closed. A search bar at the top lets you filter by transfer order number. When there are no open orders, an illustration appears with a message “There are no transfer orders to receive”.  
 Each transfer‑order item shows the transfer order name (e.g., to-test-11), the corresponding internal ID. Clicking an item opens the detail page for that order. If the list is long, use the Load more transfer order button at the bottom to fetch additional entries.
 
+![Transfer Orders list showing search, status tabs, and transfer order rows](../.gitbook/assets/receiving-transfer-orders-list.png)
+
 ## Receiving a transfer order
 
 ### Understanding the detail page
@@ -17,6 +19,8 @@ Below the banner are:
   * Received and Completed lists items that have been closed.
 
 Switching to the Open tab is useful when working through large orders.
+
+![Transfer Order Details screen showing the order summary, item filters, receiving controls, and progress actions](../.gitbook/assets/receiving-transfer-order-detail.png)
 
 ### Item cards
 
