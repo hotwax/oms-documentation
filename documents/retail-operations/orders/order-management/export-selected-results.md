@@ -26,10 +26,19 @@ The selection stays in place when the download starts. If you change your search
 
 | Where you started | CSV contents |
 | --- | --- |
-| [Find orders](find-sales-orders.md), [Unfillable](unfillable-orders.md), [Brokering queue](brokering-queue.md), [Open](open-orders.md), [In flight](inflight-orders.md), or [Packed](packed-orders.md) | One row per selected order ID. Columns include the order ID, order name, customer, status, sales channel, order date, carrier, shipping method, and estimated delivery. |
+| [Find orders](find-sales-orders.md), [Unfillable](unfillable-orders.md), or [Brokering queue](brokering-queue.md) | One row per matching item on a selected order when item details are available. Each row repeats the order details and includes the item sequence ID, SKU, and quantity when available. |
+| [Open](open-orders.md), [In flight](inflight-orders.md), or [Packed](packed-orders.md) | One summary row per selected order. Columns include the order ID, order name, customer, status, sales channel, order date, carrier, shipping method, and estimated delivery. |
 | `Find returns` | One row per selected return ID. Columns include the return ID, entry date, linked order ID and name, customer, return type ID, return channel ID, destination facility ID, and status ID. |
 | [Find customers](find-customers.md) | One row per selected party ID. Columns include the party ID, name, email address, and phone number. |
 
-Exports from `Find orders`, `Unfillable`, and `Brokering queue` include a `SKUs` column when the search returns a SKU for at least one selected order. Each row lists the distinct SKUs for that order's items that match the current search and filters. The cell is blank for orders without a matching SKU.
+If the search returns no item details for a selected order, the CSV includes one summary row for that order. When the export contains item columns, those cells are blank for summary rows.
+
+For example, when two items on order `10001` match the `Unfillable` search, the CSV contains the following rows. The example shows only the order ID and item columns.
+
+```csv
+Order ID,Order item sequence ID,SKU,Quantity
+10001,00001,TEE-BLK-M,2
+10001,00002,TEE-WHT-M,1
+```
 
 Some values may be blank when the list has no data for that field. The order queues may export identifiers for fields such as status or shipping method. For `Find orders`, `Unfillable`, and `Brokering queue`, the estimated delivery column can also contain a promised date or shipping deadline when that is the available date.

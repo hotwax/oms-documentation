@@ -73,7 +73,7 @@ Select a row outside `Select` mode to open [Order details](view-order-details.md
 
 The page loads 50 orders at a time. The header checkbox does not select results that have not loaded. Scroll until the loaded count matches the total before selecting the complete filtered population.
 
-To download selected orders as a CSV file, see [Export selected results](export-selected-results.md). When available, the `SKUs` column lists the SKUs of items in Unfillable Parking that match the current search and filters.
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md). Each item in Unfillable Parking that matches the current search and filters gets its own row when item details are available.
 
 ## Broker selected ship groups
 
