@@ -137,3 +137,11 @@ Remaining priorities:
 2. Extend existing NetSuite guidance for v3.5.4 upgrade readiness: verify rule compatibility with removed due-view fields and preserve approved business holds. Optional component presence is not proof that the integration is installed.
 3. Continue return-rollout diagnostics, mapping exception cases, packed-transfer permissions, and job/inventory monitoring with exact source and configuration evidence. Reports alone do not establish root causes, country-specific support, or accepted behavior.
 4. Continue the existing safe count/receiving correction and platform runtime-acceptance backlog; do not duplicate or overwrite active documentation batches.
+
+## Selected-Line Cancellation Backfill: November 21, 2026
+
+The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-only-the-full-order-action-appears) now distinguishes the Order Manager Items footer and visible order-level action from selected-line eligibility and downstream cancellation evidence. It adds an isolated two-line acceptance checklist, separate full-order coverage, and originating-channel acknowledgement checks without giving operational cancellation or financial instructions.
+
+The new subsection is source-verified against the November 20 Order Manager source snapshot and Shopify connector v4.6.6. By publication time, Maarg v5.5.30.1 (November 20, 19:03 UTC) was the latest release reviewed; its active manifest pins Shopify connector v3.5.10. The newer-numbered v6.6.8.1 (November 20, 18:01 UTC) pins v4.6.6. Both active manifests include their respective Shopify connector in the default suite, with commented declarations excluded. Different release lines do not establish a deployment, and a frontend source snapshot is not a distribution pin. The existing v4.5.4 baseline for the rest of the guide is unchanged.
+
+No authenticated demo walkthrough, cancellation, asset, or runtime acceptance is claimed. Remaining checks are installed app and connector versions, the eligible and hidden-control cases on a synthetic fixture, independent originating-channel and financial outcomes, and the backlog already listed above. Platform-family coverage remains 26.

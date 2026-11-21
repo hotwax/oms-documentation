@@ -69,6 +69,18 @@ For repeated partial cancellations, also compare the current cancelled quantity 
 
 A successful item-history match is scoped to shop, order, line, and change ID. Do not delete that history to force another send, and do not assume it protects a separate manual refund or direct service call.
 
+### When Only The Full-Order Action Appears
+
+In the reviewed Order Manager source, open the order detail and choose **Items**. The footer distinguishes **Cancel N items**, which applies to eligible selected lines, from **Cancel order**, which is an order-level action. In the reviewed build source, a feature safeguard hides the selected-item action even when the whole-order action is still offered. In builds that expose the item action, the selection and order/item status rules still matter. The current control, installed app version, and applicable channel policy are separate checks.
+
+1. Check the exact order source, installed app version, Items selection, and current order and line statuses. Record whether the app offers the item action, only the order action, or neither. Do not press **Cancel order** to test one line.
+2. If the item action is unavailable, send that evidence to the integration owner. A provider supporting item adjustments does not establish that this app exposes the action or that the installed integration sends it.
+3. If an authorized action already took place, compare the intended line and quantity in the order detail, its mapped Shopify line, and the downstream order state. For an order sourced from another channel, ask which integration owns notification to that channel and look for its acknowledgement separately. A Shopify line change does not prove the originating channel accepted it.
+
+For an approved isolated acceptance test, use two distinct eligible items on one test order. Verify only the intended line changes, the other line stays fulfillable, and the downstream channel reflects the same result if that route is in scope. Check financial transactions and restock independently as described above. Run a whole-order case separately to confirm the established full-cancellation path is unchanged. Do not use a live order, change a feature safeguard, or use a full cancel as a workaround.
+
+This subsection is source-verified against the reviewed Order Manager revision and the partial/full outbound paths in Shopify connector v4.6.6. It does not establish an installed application version, enabled channel capability, or completed UAT.
+
 ### Full-Order Cancellation
 
 The reviewed order-event receiver has a separate history check, using `orderItemSeqId = _NA_` for an order-level success. The push service selects eligible cancelled lines, excluding Shopify-originated changes and lines with successful outbound cancellation history, then requests line-level refund/restock processing before requesting order cancellation. The second request uses the same refund policy for remaining captured amounts, such as shipping, and does not request another restock. Reconcile both requests and any remaining order-level financial outcome; success of the first does not prove completion of the second.
