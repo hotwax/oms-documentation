@@ -30,4 +30,6 @@ The selection stays in place when the download starts. If you change your search
 | `Find returns` | One row per selected return ID. Columns include the return ID, entry date, linked order ID and name, customer, return type ID, return channel ID, destination facility ID, and status ID. |
 | [Find customers](find-customers.md) | One row per selected party ID. Columns include the party ID, name, email address, and phone number. |
 
+The `Unfillable` export also includes an `Unfillable SKUs` column. It lists the recorded SKUs for open items assigned to Unfillable Parking. When an order has several unfillable SKUs, they appear together in the same cell.
+
 Some values may be blank when the list has no data for that field. The order queues may export identifiers for fields such as status or shipping method. For `Find orders`, `Unfillable`, and `Brokering queue`, the estimated delivery column can also contain a promised date or shipping deadline when that is the available date.
