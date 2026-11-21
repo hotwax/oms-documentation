@@ -56,6 +56,8 @@ Use the allocation fraction only for orientation. If supporting item data fails 
 
 Select a row to open [Order details](view-order-details.md) and work with that order.
 
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md).
+
 ## Interpret list states
 
 The header shows loaded orders out of the total matching orders. More results append as you scroll.

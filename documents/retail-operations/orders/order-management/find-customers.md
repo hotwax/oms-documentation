@@ -52,6 +52,8 @@ The list starts with up to 50 customers. The header shows the number of loaded c
 
 Scroll to load the next group when the loaded count is lower than the total. Continue until you find the record or all matching customers are loaded.
 
+To download selected customers as a CSV file, see [Export selected results](export-selected-results.md).
+
 ## Resolve search problems
 
 * A progress bar means the customer search is loading.

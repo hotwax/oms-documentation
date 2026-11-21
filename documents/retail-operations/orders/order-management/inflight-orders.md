@@ -57,6 +57,8 @@ Selection is stored by order ID. Select `Done` to leave select mode and clear th
 Do not use `Add to picklist`. It does not call a fulfillment service or create a picklist. The page can clear your selection and display an `Add to picklist: N orders` message even though no picklist was created. Neither result is confirmation.
 {% endhint %}
 
+To download selected orders as a CSV file, see [Export selected results](export-selected-results.md).
+
 ## Continue through a supported fulfillment workflow
 
 This page has no supported bulk outcome to document. For an order that needs a picklist:
