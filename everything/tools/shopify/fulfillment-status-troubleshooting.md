@@ -168,6 +168,22 @@ Escalate with both payment identities, source shop/order/capture correlation, th
 
 Reviewed November 20, 2026 against the tagged selection, payload and batch-service source. Maarg v6.6.8 declares connector 3.6.6 outside its default OMS suite; neither release publication nor a declared component proves installation, an enabled exchange job or runtime success. No authenticated exchange, accounting action or new screenshot was used for this addition.
 
+### Read NetSuite Customer Refund Audit Pairs
+
+Use this read-only check when a return has a Credit Memo but its NetSuite Customer Refund or application is unclear. This is ERP return settlement, not a Shopify cancellation refund, an exchange deposit, or proof that a payment provider released funds.
+
+**Prerequisites:** authorized access to the OMS return/payment, the expected NetSuite account, and [System Messages](../maarg/system-messages.md). Ask the integration owner to confirm that the installed route calls the synchronous `create#NetSuiteCustomerRefundFromCreditMemo` service. This procedure applies to the reviewed NetSuite connector **3.6.6** implementations; other refund jobs can have different lifecycles.
+
+1. **Start with one payment and Credit Memo.** Find the original OMS refund-payment identity and mapped NetSuite Credit Memo. In **System Messages > Find Options**, narrow to the known time window, the applicable remote/account and message type `NetSuiteCustomerRefund`. Confirm document subtype `CreateFromCreditMemo` in the details when available. Match the payment in `messageId` and open the matching details. If those fields are not exposed, ask the owner for an authorized read-only lookup.
+2. **Match the outgoing and incoming audit rows.** The outgoing row's remote message ID is the Credit Memo; the incoming row's remote message ID is the returned Customer Refund ID, when available. The incoming row's parent reference points to the exact outgoing message. Use the parent link to pair an exact attempt; the outgoing acknowledgement reference can confirm the link when present. Timestamps narrow the search but do not identify a pair by themselves.
+3. **Interpret the pair by installed version.** In the reviewed route, an HTTP 2xx records **Confirmed** (`SmsgConfirmed`) on the request and **Consumed** (`SmsgConsumed`) on the response. A non-2xx or missing HTTP status records **Error** on both if the audit-recording stage is reached. These are synchronous audit rows, not work waiting for a background consumer. On an older build, a successful reply can still be labeled **Received**; check the original response and installed version before classifying a consumer error as an unsent refund. Do not trigger consumption or change message status as a diagnostic step.
+4. **Verify the destination transaction and application.** If an ID is stored, read that exact Customer Refund in the correct NetSuite account and compare the refund amount/currency, applied Credit Memo and applied amount. If the response indicates an existing record, inspect that same record rather than counting another refund. A 2xx path sets the audit statuses from HTTP status, so a missing refund ID or missing application still needs reconciliation. A Credit Memo balance alone does not identify which transaction applied it.
+5. **Keep missing evidence unresolved.** Error rows can survive a failed local calling transaction because the audit writes use separate transactions. Conversely, a preflight error before the call can leave no pair at all. Missing or incomplete audit pairs, a timeout, or a local rollback do not by themselves establish whether NetSuite accepted a prior attempt. Have the responsible owner check the actual request reference and destination before considering any recovery.
+
+For recurring error-report rows, group by verified account, payment and attempt, not by email count. Retain only the minimum references and a redacted reason in approved support channels. Do not reissue a refund, modify the Credit Memo, clear audit history or replay a message to make the statuses agree.
+
+Reviewed November 22, 2026 against the tagged synchronous refund services. The terminal audit-state correction was released in NetSuite connector 3.6.4 and is present in 3.6.6. No authenticated refund, settlement, or accounting action was performed, and no screenshot or installation evidence is claimed.
+
 ## 6. Agree On A Bounded Recovery
 
 Escalate with the first incomplete stage, its owner, expected result, evidence, and business deadline. The next action depends on the finding:

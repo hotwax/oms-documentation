@@ -147,3 +147,12 @@ The existing [fulfillment and billing guide](../shopify/fulfillment-status-troub
 The new subsection is source-verified against optional NetSuite connector 3.6.6. Latest-published Maarg v6.6.8 (November 19, 2026, 13:08:18 UTC) declares that connector outside the default OMS suite; active manifest entries were reviewed with comments excluded. Standalone frontends and installed routes remain separate verification questions. No authenticated exchange outcome, write action, screenshot or runtime acceptance is claimed.
 
 Remaining priorities: approved synthetic missing-source-history, absent-credit-reference, claimed/refused and successful replacement-order deposit fixtures; actual client route/payload configuration and independent accounting application evidence; existing package, inventory/publisher, intake, receiving/count, catalog and closure drafts. New release source does not resolve reported incidents or complete ongoing upkeep.
+
+
+## NetSuite Refund Audit Backfill: November 22, 2026
+
+The existing [fulfillment and billing guide](../shopify/fulfillment-status-troubleshooting.md#read-netsuite-customer-refund-audit-pairs) now explains synchronous NetSuite Customer Refund and Credit Memo audit pairs, version-specific statuses, exact attempt correlation, and independent destination/application verification. It remains separate from Shopify outbound cancellation and exchange deposits. Prior text and all 26 platform families are retained.
+
+The implementation was reviewed at optional NetSuite connector 3.6.6, carrying the correction released in 3.6.4. The latest Maarg distribution by publication time is the older-line v5.5.30.1 (November 20, 2026, 19:03:31 UTC); its uncommented manifest declares optional NetSuite 2.6.7, not the reviewed implementation. The later-semver v6.6.8 line was published earlier. Publication, distribution inclusion and installation remain distinct.
+
+No authenticated return, refund or accounting operation was tested. Queue-consumer behavior was assessed from source, not from live records. Remaining priorities: approved historical-reply and current-terminal audit fixtures, partial/unknown refund outcomes, installed route and actual destination settlement, plus earlier backlog.
