@@ -44,7 +44,7 @@ The uploader record ID is `customscript_imp_inventoryitem`, although the script 
 
 ### Daily inventory resets and peak sales
 
-Malbon runs a daily full on-hand inventory reset from NetSuite to HotWax. A separate daily on-hand reset sends inventory from HotWax to Shopify. During peak sales events such as Black Friday and Cyber Monday, Malbon can pause the Shopify reset and rely on event-based ledger updates to keep inventory in sync and reduce oversell risk.
+Malbon runs a full on-hand inventory reset from NetSuite to HotWax daily at midnight PDT. A separate on-hand reset sends inventory from HotWax to Shopify daily at 3:00 a.m. PDT. During peak sales events such as Black Friday and Cyber Monday, Malbon can pause the Shopify reset and rely on event-based ledger updates to keep inventory in sync and reduce oversell risk.
 
 ## What happens when a customer places an order
 
