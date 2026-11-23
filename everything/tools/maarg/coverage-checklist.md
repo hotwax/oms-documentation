@@ -156,3 +156,12 @@ The existing [fulfillment and billing guide](../shopify/fulfillment-status-troub
 The implementation was reviewed at optional NetSuite connector 3.6.6, carrying the correction released in 3.6.4. The latest Maarg distribution by publication time is the older-line v5.5.30.1 (November 20, 2026, 19:03:31 UTC); its uncommented manifest declares optional NetSuite 2.6.7, not the reviewed implementation. The later-semver v6.6.8 line was published earlier. Publication, distribution inclusion and installation remain distinct.
 
 No authenticated return, refund or accounting operation was tested. Queue-consumer behavior was assessed from source, not from live records. Remaining priorities: approved historical-reply and current-terminal audit fixtures, partial/unknown refund outcomes, installed route and actual destination settlement, plus earlier backlog.
+
+
+## NetSuite Fulfillment Line Link Backfill: November 23, 2026
+
+The [fulfillment and billing guide](../shopify/fulfillment-status-troubleshooting.md#distinguish-fulfillment-line-identity-from-display-sequence) now traces shipped fulfillment selection, line-link identity, ledger counts, import results and resulting shipments. It distinguishes wrong or missing joins from excluded lines, missing OMS identifiers, and unavailable evidence. Existing package gating, return settlement, deposits, and all 26 platform families are retained.
+
+Reviewed NetSuite connector 3.6.6 against the earlier 3.6.5 join and confirmed the correction in 3.3.17. Maarg v6.6.8.1 and v6.3.34.1 declare those respective corrected connector versions outside their default OMS suites. Latest by publication is still v5.5.30.1 (November 20, 2026, 19:03:31 UTC), which declares optional NetSuite 2.6.7. Active manifests exclude commented entries; none establishes installation or an active route.
+
+No authenticated fulfillment, fixture, screenshot, or action was performed. Keep approved mismatched-line-ID, count mismatch, missing OMS ID and successful shipment fixtures, historical reconciliation and deployed execution evidence on the backlog along with prior coverage.
