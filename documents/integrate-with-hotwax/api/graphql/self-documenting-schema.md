@@ -10,7 +10,7 @@ The [schema reference](schema-reference.md) is generated, not written. This page
 
 ## Why not OpenAPI
 
-The REST components in this space, such as [Fulfillment](../../components/fulfillment/README.md) and [Order Routing](../../components/order-routing/README.md), are documented from OpenAPI specifications that Moqui generates from its own REST resource definitions. GitBook renders those specs natively, so those pages grow whenever a service is added.
+The REST components in this space, such as [Fulfillment](../../components/fulfillment/README.md) and [Order Routing](../../components/order-routing/README.md), are documented from OpenAPI specifications that the OMS generates from its own REST resource definitions. GitBook renders those specs natively, so those pages grow whenever a service is added.
 
 That approach does not transfer to GraphQL, for a structural reason rather than a tooling one. A GraphQL API is **one** HTTP endpoint. An OpenAPI description of it can only say:
 
@@ -41,7 +41,7 @@ Two mechanisms expose the schema. Only one of them is usable here.
 curl 'https://<instance>.hotwax.io/rest/s1/graphql/sdl'
 ```
 
-`GET /rest/s1/graphql/sdl` returns the schema definition language for the schema **that instance is actually running**. It requires no authentication, which makes it usable from a CI job with no secrets. It is the direct analogue of Moqui's `/rest/service.swagger/<root>` endpoint: the server describing itself.
+`GET /rest/s1/graphql/sdl` returns the schema definition language for the schema **that instance is actually running**. It requires no authentication, which makes it usable from a CI job with no secrets. It is the direct analogue of the OMS `/rest/service.swagger/<root>` endpoint: the server describing itself.
 
 Because the search keys and sort keys are written into each collection root's field description, and the sort keys are real GraphQL enums, the filterable surface rides along in the SDL rather than needing separate upkeep.
 
@@ -96,13 +96,13 @@ workflow_dispatch
 
 {% hint style="info" %}
 **Current state.** The committed reference was generated from the schema artifact in the
-`moqui-gql` repository, because the endpoint is not yet loaded on a shared instance. The first
+OMS GraphQL component repository, because the endpoint is not yet loaded on a shared instance. The first
 successful workflow run against a live instance will replace it, and the probe step above skips
 regeneration rather than failing while the endpoint returns 404.
 {% endhint %}
 
 {% hint style="warning" %}
-**Generate only from a running instance.** The moqui-gql repository also contains a design contract SDL that describes planned surface alongside what is built. Generating from that file would document objects and roots the API does not serve. The workflow reads the SDL endpoint for exactly this reason.
+**Generate only from a running instance.** The OMS GraphQL component repository also contains a design contract SDL that describes planned surface alongside what is built. Generating from that file would document objects and roots the API does not serve. The workflow reads the SDL endpoint for exactly this reason.
 {% endhint %}
 
 ## What still needs a human

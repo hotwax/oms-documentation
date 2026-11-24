@@ -11,7 +11,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 2. To find details about SOLR versions, refer to the [SOLR version document](https://docs.google.com/spreadsheets/d/1H-iEVG-hS9FTsYOf5YiUH-5KOJUcu0\_TiPG8aVYjaHU/edit?gid=0#gid=0)
 {% endhint %}
 
-{% hint style="warning" %} Before pushing the OMS v6.6.15 release to production, we need to make sure the maarg is deployed on v4.1.3 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.6.15 release to production, we need to make sure the companion OMS API service is deployed on v4.1.3 {% endhint %}
 
 ## Release - v6.6.15 (8th July 2025)
 
@@ -177,7 +177,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.6.0...v6.6.2?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.6.2/CHANGELOG.md?ref_type=tags)                    |
 
-{% hint style="warning" %} Before pushing the OMS v6.6.0 release to production, we need to make sure the maarg is deployed on v3.8.12 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.6.0 release to production, we need to make sure the companion OMS API service is deployed on v3.8.12 {% endhint %}
 
 ## Release - v6.6.0 (29th May 2025)
 
@@ -248,7 +248,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.5.0...v6.5.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.5.1/CHANGELOG.md?ref_type=tags)                    |
 
-{% hint style="warning" %} Before pushing the OMS v6.5.0 release to production, we need to make sure the maarg is deployed on v3.7.9 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.5.0 release to production, we need to make sure the companion OMS API service is deployed on v3.7.9 {% endhint %}
 
 ## Release - v6.5.0 (5th May 2025)
 
@@ -341,7 +341,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.4.0...v6.4.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.4.1/CHANGELOG.md?ref_type=tags)                    |
 
-{% hint style="warning" %} Before pushing the OMS v6.4.0 release to production, we need to make sure the maarg is deployed on v3.7.7 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.4.0 release to production, we need to make sure the companion OMS API service is deployed on v3.7.7 {% endhint %}
 
 ## Release - v6.4.0 (21st April 2025)
 
@@ -481,7 +481,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 | Diff            | [Link to diff](https://git.hotwax.co/commerce/oms/-/compare/v6.3.0...v6.3.1?from_project_id=161&straight=false)     |
 | Changelog       | [Link to changelog](https://git.hotwax.co/commerce/oms/-/blob/v6.3.1/CHANGELOG.md?ref_type=tags)                    |
 
-{% hint style="warning" %} Before pushing the OMS v6.3.0 release to production, we need to make sure maarg is deployed on v3.6.1 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.3.0 release to production, we need to make sure the companion OMS API service is deployed on v3.6.1 {% endhint %}
 
 ## Release - v6.3.0 (25th March 2025)
 
@@ -679,7 +679,7 @@ description: Discover  the versions of HotWax Commerce OMS releases.
 [Link to Upgrade SQL](https://git.hotwax.co/commerce/oms/-/blob/v6.2.2/upgrade/v6.2.2/UpgradeSQL.sql?ref_type=tags)
 {% endtab %}
 
-{% hint style="warning" %} Before pushing the OMS v6.2.0 release to production, we need to make sure the maarg is deployed on v3.7.7 {% endhint %}
+{% hint style="warning" %} Before pushing the OMS v6.2.0 release to production, we need to make sure the companion OMS API service is deployed on v3.7.7 {% endhint %}
 
 ## Release - v6.2.1 (20th February 2025)
 
