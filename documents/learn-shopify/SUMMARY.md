@@ -20,6 +20,7 @@
   * [Order promise dates](shopify-integration/orders/order-promise-dates.md)
   * [Order Approval for Fulfillment](shopify-integration/orders/order-approval-for-fulfillment.md)
   * [Order Updates](shopify-integration/orders/order-updates.md)
+  * [Customer service and daily operations](shopify-integration/customer-service-operations.md)
   * [POS Sales Download](shopify-integration/orders/pos-sales-download.md)
   * [Gift Cards Order Download](shopify-integration/orders/giftcards-download.md)
   * [Kit Order Download](shopify-integration/orders/kit-products-download.md)
