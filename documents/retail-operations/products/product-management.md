@@ -45,6 +45,8 @@ The search text, filters, tags, and sort stay in place when you reload the page.
 
 A new search, filter, or sort keeps only the selected products that are still listed, so a product hidden by the search isn't tagged.
 
+<figure><img src="../.gitbook/assets/product-workbench.png" alt="Product workbench filtered to the Abominable Hoodie product family from the demo OMS, sorted by Product family"><figcaption><p>Find and triage products in the Product workbench</p></figcaption></figure>
+
 ## 2. Inspect and edit product details
 
 **Goal:** Confirm the product family and update the correct parent or variant without overwriting unrelated product data.
@@ -273,7 +275,7 @@ The Products app does not provide search-index status or a manual index rebuild 
 
 **Outcome:** You have confirmed the OMS and store context, ruled out search filters and a retryable load error, or prepared a focused escalation for index recovery.
 
-<figure><img src="../.gitbook/assets/products-settings.png" alt="Products app settings showing the demo OMS instance and Demo Store"><figcaption><p>Confirm the OMS instance and current product store</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/products-settings.png" alt="Products app settings showing the demo OMS instance, Demo Store, and the Product identifier card"><figcaption><p>Confirm the OMS instance and current product store</p></figcaption></figure>
 
 ## 7. Choose the product identifier shown on product rows
 
