@@ -12,6 +12,10 @@ Store counts are accessed via the Counts tab. Each card represents a cycle count
   * Created counts show `Start counting` (to begin the first session) and `Preview count` (to view details without starting).  
   * In progress counts show `Review progress and complete` (to open the progress page) and `New session` (to add more counters).
 
+![In-progress cycle count showing its dates, review action, and sessions](../.gitbook/assets/inventory-count/cycle-count-details.png)
+
+*The count card shows its schedule, progress action, and available sessions.*
+
 ## Required permissions
 
 * Open the Counts tab and see cycle count cards: any of `FULFILL_INVCUNT_ADMIN` or `INV_COUNT_ADMIN`.  
