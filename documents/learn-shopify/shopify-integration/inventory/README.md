@@ -1,10 +1,16 @@
 ---
-description: Understand OMS inventory quantities and Shopify channel and physical-location event publication.
+description: Understand Shopify inventory imports, OMS quantities, and outbound inventory publication.
 ---
 
 # Inventory
 
 OMS consolidates inventory changes from configured sales, receipts, transfers, counts, and external systems. Confirm that each source update was processed before investigating how its result reached Shopify.
+
+## Import physical stock from Shopify
+
+During onboarding, Shopify can provide the starting physical stock for mapped products and facilities. The inbound reset reads active products and their `on_hand` quantities, compares them with OMS quantity on hand, and queues changed levels. It excludes channel and virtual locations at import.
+
+Follow [Import inventory from Shopify](import-inventory-from-shopify.md) for scope, mapping prerequisites, received and skipped counts, verification, and recovery.
 
 ## Distinguish the quantity and target
 
