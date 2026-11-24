@@ -164,3 +164,12 @@ The [inventory comparison guide](../order-flow/inventory-comparison.md#distingui
 Source scope is NetSuite connector v3.6.5, specifically its comparison and inventory-adjustment-feed services. Latest-published Maarg v6.6.7 (November 18, 2026, 14:29:38 UTC) declares this connector as optional, outside its 10-member OMS suite; XML-commented entries were excluded. OMS and Poorti v3.6.3 and Shopify connector v4.6.5 remain suite members. This does not upgrade the guide's other implementation baselines, imply frontend inclusion or prove deployment.
 
 No authenticated runtime check, business write, replay, export-marker change or screenshot was performed for this subsection. Remaining priorities: approved installed-route and synthetic zero/invalid/partial-resource fixtures, downstream acceptance evidence, unresolved source-to-publication timelines, and the existing intake, count/receiving, closure and catalog drafts. Reports remain investigation leads, not reproduced root causes.
+
+
+## Negative Physical On-Hand Reset Backfill: November 24, 2026
+
+The existing [inventory comparison guide](../order-flow/inventory-comparison.md#read-a-negative-physical-on-hand-reset-in-two-stages) now distinguishes skip/deferral, accepted on-hand set, separate signed adjustment, and confirmed destination readback for negative physical QOH. Earlier hold, variance, publisher and failure-report diagnosis and all 26 platform families remain unchanged. This is not an operational reset or replay procedure.
+
+Source-reviewed Shopify connector 4.6.7 compared with 4.6.6. The latest of 383 published distributions by publication time, Maarg v6.6.9 (November 23, 2026, 09:20:56 UTC), includes connector 4.6.7, OMS 3.6.4 and Poorti 3.6.3 in its default suite and declares NetSuite 3.6.6 outside it. XML comments were excluded. Standalone frontend releases, installed versions and enabled routes remain separate.
+
+Retain approved synthetic intermediate-zero, per-entry rejection, unknown response and later-movement cases, installed route verification and existing coverage backlog. No authenticated reset, destination outcome or new screenshot was obtained.
