@@ -132,3 +132,10 @@ The new guide is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.
 Release scope was refreshed separately: Maarg v6.3.9, published October 8 at 13:34:59 UTC, is the latest distribution by publication time. Its active `myaddons.xml` pins Poorti v3.3.3 and Shopify connector v4.3.8; XML-commented entries were excluded. The semver-higher v6.4.2 was published October 7 and pins Poorti v3.4.1 and connector v4.4.2. Cycle Count App v5.2.1 remains the latest standalone app release and is not a frontend pin in that distribution manifest. These facts do not establish installed versions or replace the platform guides' v6.4.0 source baseline.
 
 Remaining priorities: approved synthetic export/import verification; source-qualified Draft/prelaunch product eligibility; exact-release native-transfer switch coverage; safe count/receiving correction procedures; and read-only diagnosis of reported fulfillment-queue symptoms. Customer reports are investigation leads, not reproduced defects. Receiving-history product-name changes require release and installation evidence before being described as available.
+
+
+## Manual Variance And Counts Backfill: November 25, 2026
+
+The [reason and variance guide](../launchpad/rejection-and-variance-reasons.md#trace-a-manual-variance-separately-from-counts) now separates the Cycle Count app's Variance submission from count-session history and traces local adjustments, reason-specific QOH/ATP effects and the configured NetSuite outcome. It complements, rather than replaces, count-result reconciliation and rejection-reason configuration. Earlier coverage and all 26 platform families are retained.
+
+Source-reviewed at standalone Cycle Count 5.4.3, Poorti 3.6.3 and optional NetSuite connector 3.6.6. The latest of 383 published distributions remains Maarg v6.6.9, November 23 at 09:20:56 UTC. Its uncommented default suite includes Poorti, not optional NetSuite or the separately released frontend. No installed-version, runtime or screenshot claim. Retain approved signed adjustment, zero, unknown submission and downstream movement fixtures.
