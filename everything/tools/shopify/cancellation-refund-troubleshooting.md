@@ -6,7 +6,7 @@ description: >-
 
 # Cancellation And Refund Troubleshooting
 
-Use this guide when an OMS cancellation appears in Shopify but the customer has not been refunded, a refund exists without the expected cancellation status, or an operator has already refunded manually. It covers outbound OMS-initiated cancellations, not return receiving, exchanges, or ERP settlement.
+Use this guide when an OMS cancellation appears in Shopify but the customer has not been refunded, a refund exists without the expected cancellation status, or an operator has already refunded manually. It primarily covers outbound OMS-initiated cancellations, with a separate inbound check for Shopify restocks on already fulfilled lines. It does not cover return receiving, exchanges, or ERP settlement.
 
 **Verification scope:** Source-verified on October 22, 2026 against Shopify connector v4.5.4 cancellation services, feed receivers, and v4.4.0 migration instructions shipped in that source. The latest published Maarg distribution reviewed was v6.5.3: its active manifest pins Shopify connector v4.5.4 in the production oms-suite. Publication or a manifest entry does not prove installation. The hosted demo reached only Login, so installed versions, authenticated navigation, refund execution, and recovery behavior were not runtime-verified. No transaction was executed for this guide.
 
@@ -124,6 +124,17 @@ These are diagnostic checks, not instructions to change catalog membership, loca
 6. After an approved action, verify the destination result, affected quantities, transaction amount/currency/status, inventory outcome where applicable, and subsequent OMS reconciliation. Retain unresolved exceptions rather than closing on matching status labels alone.
 
 The reviewed path contains history-based skip checks, but this is **not a guarantee that arbitrary replay, a direct service call, or a manual refund is idempotent**. The guide deliberately provides no executable retry or refund steps.
+
+## When Shopify Restocked An Already Fulfilled Line
+
+This is the **inbound** path: Shopify recorded a cancellation or refund after the line was fulfilled, but the expected stock movement is not visible in HotWax. Do not use the outbound refund-policy setting to explain an inbound inventory result.
+
+1. In **Shopify Admin > Orders**, open the order and compare the fulfillment, refund or return, and cancellation in its timeline. Confirm the exact variant, quantity, restock type and location from the authorized order and inventory records. Compare event timestamps in the same time zone; the refund may precede the cancellation by only a short interval.
+2. In the HotWax OMS order detail, inspect **Items** and the matching fulfilled or completed lines. In authorized job or message diagnostics, check which inbound route handled the affected refund, the classification it used, and whether any requested lines were skipped. A completed job or imported financial transaction does not prove that stock moved.
+3. Compare the movement history for the exact variant and mapped facility, not just the current on-hand total. Verify the original deduction, any positive return or inventory entry, and intervening sales or counts. For example, a later sale can offset an earlier restock in a snapshot. Matching totals alone cannot prove a restock was posted.
+4. If Shopify shows a restock but the receiving movement is missing or the facility differs, record the first missing step and ask the inventory owner to verify the physical units and current balances. A Shopify restock is not proof that a customer returned the item or a store physically received it. Do not issue another refund, replay the event, or adjust stock to make the systems agree.
+
+**Source scope:** In the reviewed Shopify connector v4.3.27 and v4.6.7 inbound refund handlers, a Shopify order with a cancellation timestamp is classified as `CANCEL` in this handler. That branch selects only eligible unfulfilled OMS lines for cancellation. If none are eligible, it logs a skip; it does not import a fulfilled line as a return through that branch. Successful Shopify refund transactions can be recorded separately from item processing. Verify the actual installed route and event before applying this explanation to an incident.
 
 ## Escalation Checklist
 
