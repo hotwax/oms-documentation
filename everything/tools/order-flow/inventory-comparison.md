@@ -155,6 +155,27 @@ Keep this workflow separate from a direct OMS absolute reset, an inbound signed 
 
 Reviewed November 19, 2026 against the tagged connector service implementation. Maarg v6.6.7 declares this optional connector outside its default OMS suite; declaration does not prove installation or an enabled route. This is source-only guidance: no authenticated comparison, feed delivery or destination outcome was exercised, and no screenshot is offered as runtime proof.
 
+### When A Store Rejects An Assigned Line As Not In Stock
+
+A rejection records what the store reported when it tried to fulfill a line. It does not tell you how much stock the source system reported or what the routing rule saw when OMS assigned the line. Start with one order line, one store, and one product. Match the order ID and item sequence, facility, internal product ID, and any barcode or external inventory identifier before comparing quantities.
+
+1. **Find the assignment and rejection.** Open the order details in OMS and identify the affected line and ship group. Match the assigned facility and assignment time to the routing record, then find the rejection time, reason, and quantity where recorded. Use [routing-run history](../maarg/order-routing-runs.md) if you need to find the corresponding batch and rule.
+2. **Check sellable stock just before assignment.** Look for the rule's recorded inventory input. If it is unavailable, use timestamped inventory and reservation history to see whether that input can be reconstructed. Compare the requested quantity with eligible availability, including any confirmed safety stock or sourcing rule. Keep an assignment separate from a reservation, and compare the balance before the reservation, not the reduced balance after it.
+3. **Trace the source quantity into OMS.** Compare the source system's quantity, quantity type, product and facility references, and outbound timestamp with the OMS import result and the time it took effect. A source snapshot or file creation time does not prove that OMS had already applied it. Account for sales, receipts, counts, adjustments, and reservation changes between the assignment and the store's pick.
+4. **If it happens again, check what changed.** For the same product and facility, trace the release of the prior reservation and the next stock update before the new assignment. The release and a new inventory update are separate events; establish which happened before concluding that either made the unit available again.
+
+Check the definition of any report column before using it as historical evidence. In the [documented fulfillment rejection report query](https://github.com/hotwax/oms-documentation/blob/11358cee737a210646d3ac7c68c483d350895a24/documents/analytics/reports/fulfillment.md#L48-L74), the column labeled `ATP` comes from the facility's last recorded inventory count, and `SKU` comes from a UPC-A identifier. The query does not reconstruct the assignment-time balance. A customized report can use different fields; verify its definition rather than assuming the labels are interchangeable.
+
+| Evidence | What It Supports |
+| --- | --- |
+| The routing record shows insufficient eligible units just before assignment, but the line was assigned there | Review the recorded rule and any override or alternate assignment path. |
+| OMS had enough eligible units and later movements account for the store's shortage | Stock changed after assignment; check when the movement reached OMS. |
+| The source reported units the store could not locate, with no matching movement in the records reviewed | Investigate a possible physical discrepancy or a missing movement. The rejection alone does not establish a source error. |
+| The source update was sent before assignment but took effect later, or never took effect | Investigate the source-to-OMS update timing or failure if that update would have changed eligibility. |
+| Only the rejection or a later balance is available | The store's reported outcome is known; the assignment-time cause is not. |
+
+Do not change inventory, release reservations, reroute orders, or replay feeds to test these explanations. If the relevant historical balance cannot be recovered, hand off the order line, facility, timestamps, and missing evidence instead of assigning a cause.
+
 ### Separate Future Supply From Shopify Presell Availability
 
 An imported purchase-order line or arrival date confirms only that the corresponding source data is present. It does not establish that the variant is eligible for presell, that Shopify accepted the listing update, or that the storefront offers the variant for preorder.

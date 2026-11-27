@@ -173,3 +173,7 @@ The existing [inventory comparison guide](../order-flow/inventory-comparison.md#
 Source-reviewed Shopify connector 4.6.7 compared with 4.6.6. The latest of 383 published distributions by publication time, Maarg v6.6.9 (November 23, 2026, 09:20:56 UTC), includes connector 4.6.7, OMS 3.6.4 and Poorti 3.6.3 in its default suite and declares NetSuite 3.6.6 outside it. XML comments were excluded. Standalone frontend releases, installed versions and enabled routes remain separate.
 
 Retain approved synthetic intermediate-zero, per-entry rejection, unknown response and later-movement cases, installed route verification and existing coverage backlog. No authenticated reset, destination outcome or new screenshot was obtained.
+
+## Stock Rejection Evidence: November 27, 2026
+
+The [inventory comparison guide](../order-flow/inventory-comparison.md#when-a-store-rejects-an-assigned-line-as-not-in-stock) now traces one line from routing and reservation through stock import and store rejection. It separates last-count report fields from assignment-time evidence and gives read-only checks for repeat rejections. The public report definition was source-checked; deployment, tenant report variants, and authenticated workflows were not verified. Prior platform coverage and backlog are unchanged.
