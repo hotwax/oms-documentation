@@ -122,3 +122,36 @@ The new guide is source-verified against Cycle Count App v5.2.1 and Poorti v3.3.
 Release scope was refreshed separately: Maarg v6.3.9, published October 8 at 13:34:59 UTC, is the latest distribution by publication time. Its active `myaddons.xml` pins Poorti v3.3.3 and Shopify connector v4.3.8; XML-commented entries were excluded. The semver-higher v6.4.2 was published October 7 and pins Poorti v3.4.1 and connector v4.4.2. Cycle Count App v5.2.1 remains the latest standalone app release and is not a frontend pin in that distribution manifest. These facts do not establish installed versions or replace the platform guides' v6.4.0 source baseline.
 
 Remaining priorities: approved synthetic export/import verification; source-qualified Draft/prelaunch product eligibility; exact-release native-transfer switch coverage; safe count/receiving correction procedures; and read-only diagnosis of reported fulfillment-queue symptoms. Customer reports are investigation leads, not reproduced defects. Receiving-history product-name changes require release and installation evidence before being described as available.
+
+## Customer-Support Backfill: October 22, 2026
+
+The proposed [Cancellation And Refund Troubleshooting guide](../shopify/cancellation-refund-troubleshooting.md) separates outbound cancellation, financial refund, and inventory restock. It adds version-qualified shop-policy inspection, exact entity filters, partial-line versus full-order handling, processed/failed/skipped interpretation, asynchronous completion checks, and a reconciliation gate before any manual refund or retry. It does not provide executable financial or replay actions, and does not treat customer reports as reproduced defects.
+
+Source verification uses Shopify connector v4.5.4 cancellation services and feed receivers, with the migration instructions present in that tag. Latest distribution by publication was Maarg v6.5.3, published October 22 at 11:42:04 UTC. Its active manifest pins OMS v3.5.2, Poorti v3.5.1, maarg-util v4.5.2 and Shopify connector v4.5.4; XML-commented entries were excluded. NetSuite connector v3.5.4 is an optional manifest entry outside the production oms-suite selected by the Dockerfile. A standalone component release, manifest pin, suite inclusion and actual installation are different evidence. These findings do not replace older platform-guide baselines globally.
+
+The hosted demo was checked read-only and reached Login, so no authenticated version, cancellation, refund, or recovery was observed. This batch includes no new screenshot and does not claim runtime verification. Existing draft batches covering packing slips, fulfillment identifiers, rejection reasons, inventory holds, NetSuite mapping, counts and receiving remain separate; this addition does not change the 26-family platform-guide count.
+
+Remaining priorities:
+
+1. Confirm an approved authenticated read-only workflow and installed versions; separately plan isolated tests for policy-off/on, partial/full cancellation, manual-refund overlap, pending transactions, missing location mappings and acknowledgement failures. Do not use live orders as test fixtures.
+2. Extend existing NetSuite guidance for v3.5.4 upgrade readiness: verify rule compatibility with removed due-view fields and preserve approved business holds. Optional component presence is not proof that the integration is installed.
+3. Continue return-rollout diagnostics, mapping exception cases, packed-transfer permissions, and job/inventory monitoring with exact source and configuration evidence. Reports alone do not establish root causes, country-specific support, or accepted behavior.
+4. Continue the existing safe count/receiving correction and platform runtime-acceptance backlog; do not duplicate or overwrite active documentation batches.
+
+## Selected-Line Cancellation Backfill: November 21, 2026
+
+The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-only-the-full-order-action-appears) now distinguishes the Order Manager Items footer and visible order-level action from selected-line eligibility and downstream cancellation evidence. It adds an isolated two-line acceptance checklist, separate full-order coverage, and originating-channel acknowledgement checks without giving operational cancellation or financial instructions.
+
+The new subsection is source-verified against the November 20 Order Manager source snapshot and Shopify connector v4.6.6. By publication time, Maarg v5.5.30.1 (November 20, 19:03 UTC) was the latest release reviewed; its active manifest pins Shopify connector v3.5.10. The newer-numbered v6.6.8.1 (November 20, 18:01 UTC) pins v4.6.6. Both active manifests include their respective Shopify connector in the default suite, with commented declarations excluded. Different release lines do not establish a deployment, and a frontend source snapshot is not a distribution pin. The existing v4.5.4 baseline for the rest of the guide is unchanged.
+
+No authenticated demo walkthrough, cancellation, asset, or runtime acceptance is claimed. Remaining checks are installed app and connector versions, the eligible and hidden-control cases on a synthetic fixture, independent originating-channel and financial outcomes, and the backlog already listed above. Platform-family coverage remains 26.
+
+## Inbound Restock Evidence: November 26, 2026
+
+The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-shopify-restocked-an-already-fulfilled-line) now explains how to trace a Shopify restock after fulfillment without assuming a completed import or matching balances prove that HotWax posted stock. Source reviewed against Shopify connector v4.3.27 and v4.6.7. Maarg v6.3.36 was latest by publication at review and includes Shopify v4.3.27 in its active OMS suite; that does not establish installation. Authenticated runtime and a synthetic cancel-after-fulfillment acceptance fixture remain unverified. No assets or platform-family coverage changes.
+
+## Missing Cancellation Webhook Evidence: November 28, 2026
+
+The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-hotwax-cancelled-the-order-but-no-webhook-arrived) now separates the Shopify import, the OMS header change, event creation, HTTP response and receiver processing. It includes read-only correlation and a historical reconciliation check without instructions to replay or change configuration. Source scope is OMS v3.3.8 and Maarg Util v4.3.6; v6.3.27.3 declares both in its active OMS suite. Authenticated runtime and historical recovery were not tested.
+
+Release refresh: The latest published Maarg distribution reviewed was v5.5.41 (November 27, 2026 at 10:11 UTC), a separate line with Shopify connector v3.5.12, OMS v2.4.21 and Maarg Util v3.5.11 in its uncommented OMS suite. NetSuite connector v2.6.7 is declared outside that suite. A standalone component release or distribution pin is not proof of installation and does not change the guide's source baseline. No assets or platform-family coverage changed.
