@@ -6,7 +6,7 @@ description: >-
 
 # Cancellation And Refund Troubleshooting
 
-Use this guide when an OMS cancellation appears in Shopify but the customer has not been refunded, a refund exists without the expected cancellation status, or an operator has already refunded manually. It primarily covers outbound OMS-initiated cancellations, with a separate inbound check for Shopify restocks on already fulfilled lines. It does not cover return receiving, exchanges, or ERP settlement.
+Use this guide when an OMS cancellation appears in Shopify but the customer has not been refunded, a refund exists without the expected cancellation status, or an operator has already refunded manually. It primarily covers outbound OMS-initiated cancellations. Separate inbound checks cover Shopify restocks on fulfilled lines and missing OMS cancellation webhooks. It does not cover return receiving, exchanges, or ERP settlement.
 
 **Verification scope:** Source-verified on October 22, 2026 against Shopify connector v4.5.4 cancellation services, feed receivers, and v4.4.0 migration instructions shipped in that source. The latest published Maarg distribution reviewed was v6.5.3: its active manifest pins Shopify connector v4.5.4 in the production oms-suite. Publication or a manifest entry does not prove installation. The hosted demo reached only Login, so installed versions, authenticated navigation, refund execution, and recovery behavior were not runtime-verified. No transaction was executed for this guide.
 
@@ -135,6 +135,26 @@ This is the **inbound** path: Shopify recorded a cancellation or refund after th
 4. If Shopify shows a restock but the receiving movement is missing or the facility differs, record the first missing step and ask the inventory owner to verify the physical units and current balances. A Shopify restock is not proof that a customer returned the item or a store physically received it. Do not issue another refund, replay the event, or adjust stock to make the systems agree.
 
 **Source scope:** In the reviewed Shopify connector v4.3.27 and v4.6.7 inbound refund handlers, a Shopify order with a cancellation timestamp is classified as `CANCEL` in this handler. That branch selects only eligible unfulfilled OMS lines for cancellation. If none are eligible, it logs a skip; it does not import a fulfilled line as a return through that branch. Successful Shopify refund transactions can be recorded separately from item processing. Verify the actual installed route and event before applying this explanation to an incident.
+
+## When HotWax Cancelled The Order But No Webhook Arrived
+
+Use this check when a Shopify cancellation is visible in HotWax but a separate system that subscribes to OMS webhooks did not receive it. This webhook is distinct from the Shopify import and from any refund or restock.
+
+1. Open the affected order in **Shopify Admin > Orders** and in HotWax Order Manager. Compare the Shopify cancellation time with the HotWax order status history and **Items**. Record whether the whole order changed to Cancelled or only one line changed. The reviewed OMS handler emits `ORDER_CANCELLED` for a header status change; an item cancellation alone does not emit this topic.
+2. In [Data Manager Imports](../maarg/data-manager-imports.md), find the import for the correct shop and cancellation time. Ask the integration administrator to verify whether the exact import configuration allowed real-time data feeds **at that time**. The reviewed Maarg runner allows them only when the configuration's `enableDataFeed` value is `Y`. A successful import can therefore update the order without creating a webhook. Today's setting does not establish what it was when the order was cancelled. Do not change it while troubleshooting.
+3. In [System Messages](../maarg/system-messages.md), look for a `WebhookNotification` for the exact order and `ORDER_CANCELLED` topic. For each expected subscriber, compare the message's source status ID (`eventSourceId`), subscriber, and event time with the header change. Check the retained send logs and receiver records. Other topics for the same order do not count as cancellation evidence.
+4. Locate the first missing step using the table below. If the records or logs are outside retention, mark the outcome unknown. Compare one known-good event from the same subscriber and configuration where possible.
+
+| What You Can Verify | What To Check Next |
+| --- | --- |
+| Header cancelled; no matching message or send evidence | Verify the import's historical feed setting and the topic's subscriber configuration with the integration owner. Do not classify this as an HTTP delivery failure. |
+| Matching message exists, but no response is recorded | Inspect the attempt history before concluding it never left HotWax. A timeout can occur after the receiver accepts the request. |
+| Receiver returned a non-2xx response, or protocol handling was uncertain | Use the actual response and receiver logs. In the reviewed sender, a returned HTTP response, even a non-2xx response, can leave the message marked Sent. |
+| Receiver returned HTTP 2xx | The endpoint accepted the HTTP request. Ask the receiver owner to verify the event was processed and applied to the order. |
+
+For a historical comparison, match on order, source status ID and expected subscriber. Timestamp precision can vary across records, so do not classify a gap solely from a reconstructed event key. Once a configuration is corrected, check a new naturally occurring cancellation separately from any earlier missing events. Do not resend events, rerun the import, or create test cancellations on customer orders.
+
+**Source scope:** Reviewed OMS v3.3.8 and Maarg Util v4.3.6. The procedure does not establish the installed versions or the delivery behavior of other releases. No authenticated walkthrough or replay was performed.
 
 ## Escalation Checklist
 

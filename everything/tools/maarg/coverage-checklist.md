@@ -149,3 +149,9 @@ No authenticated demo walkthrough, cancellation, asset, or runtime acceptance is
 ## Inbound Restock Evidence: November 26, 2026
 
 The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-shopify-restocked-an-already-fulfilled-line) now explains how to trace a Shopify restock after fulfillment without assuming a completed import or matching balances prove that HotWax posted stock. Source reviewed against Shopify connector v4.3.27 and v4.6.7. Maarg v6.3.36 was latest by publication at review and includes Shopify v4.3.27 in its active OMS suite; that does not establish installation. Authenticated runtime and a synthetic cancel-after-fulfillment acceptance fixture remain unverified. No assets or platform-family coverage changes.
+
+## Missing Cancellation Webhook Evidence: November 28, 2026
+
+The [cancellation and refund guide](../shopify/cancellation-refund-troubleshooting.md#when-hotwax-cancelled-the-order-but-no-webhook-arrived) now separates the Shopify import, the OMS header change, event creation, HTTP response and receiver processing. It includes read-only correlation and a historical reconciliation check without instructions to replay or change configuration. Source scope is OMS v3.3.8 and Maarg Util v4.3.6; v6.3.27.3 declares both in its active OMS suite. Authenticated runtime and historical recovery were not tested.
+
+Release refresh: The latest published Maarg distribution reviewed was v5.5.41 (November 27, 2026 at 10:11 UTC), a separate line with Shopify connector v3.5.12, OMS v2.4.21 and Maarg Util v3.5.11 in its uncommented OMS suite. NetSuite connector v2.6.7 is declared outside that suite. A standalone component release or distribution pin is not proof of installation and does not change the guide's source baseline. No assets or platform-family coverage changed.
